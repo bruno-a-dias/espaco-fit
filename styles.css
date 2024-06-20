@@ -1,0 +1,297 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #125816;
+    --background-color: #c1eec5;
+    --text-color: #333;
+    --cta-bg-color: #28a745;
+    --cta-bg-hover: #218838;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+.header {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 2px;
+}
+
+.header-content {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Formulário de Pesquisa */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+    font-size: 1rem;
+}
+
+.search-form button {
+    padding: 0.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-form button:hover {
+    background: #0071b3;
+}
+
+.header p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header .cta {
+    background: var(--cta-bg-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.header .cta:hover {
+    background: var(--cta-bg-hover);
+}
+
+/* Seções */
+.section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #c5f8c5;
+    margin-bottom: 1rem;
+}
+
+#section2 {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #e8f7e8;
+    margin-bottom: 1rem;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section h3{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    width: 900px;
+    border-radius: 30px;
+    box-shadow: 12px 14px 5px #3a3a3a1a;
+}
+
+/* Seção de CTA */
+.cta-section {
+    background: #e9ecef;
+}
+
+.cta-form input[type="text"],
+.cta-form input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cta-form button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-form button:hover {
+    background: #0056b3;
+}
+
+.map-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    height: 450px;
+    border-radius: 30px;
+    box-shadow: 12px 14px 6px #3a3a3a1a;
+    border: none; /* Remover estilo inline */
+}
+
+/* Rodapé */
+.footer {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer ul li {
+    margin: 0 0.5rem;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Redes Sociais */
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#whatsapp-button img {
+    height: 120px;
+    display: block;
+    z-index: 1000;
+}
+
+#whatsapp-button {
+    margin-left: auto; /* Alinha o botão à direita */
+}
+
+/* Estilos de foco para acessibilidade */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 800px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cta-form input[type="text"],
+    .cta-form input[type="email"],
+    .cta-form button {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .social-media {
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .social-media li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
