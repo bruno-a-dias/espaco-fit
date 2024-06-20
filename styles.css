@@ -23,7 +23,9 @@ body {
     background-color: var(--background-color);
     overflow-x: hidden;
 }
-
+img{
+    width: 100%;
+}
 /* Cabeçalho */
 .header {
     background: var(--secondary-color);
